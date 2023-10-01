@@ -33,6 +33,11 @@ function generator(plop: PlopTypes.NodePlopAPI) {
         templateFile: 'templates/component/types.hbs',
       },
       {
+        type: 'add',
+        path: '../../apps/docs/stories/{{type}}/{{kebabCase name}}.stories.tsx',
+        templateFile: 'templates/component/stories.hbs',
+      },
+      {
         type: 'append',
         path: './src/index.tsx',
         pattern: /(?<insertion>\/\/ generatorID)/g,
