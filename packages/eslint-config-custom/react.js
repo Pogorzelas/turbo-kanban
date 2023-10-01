@@ -38,5 +38,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     'import/no-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'import/no-named-as-default': 'off',
   },
 };

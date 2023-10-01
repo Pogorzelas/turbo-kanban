@@ -1,14 +1,14 @@
+import type { Ref } from 'react';
+import { forwardRef } from 'react';
 import type { {{ pascalCase name }}Props } from './{{kebabCase name}}.types';
 
-function {{ pascalCase name }} ({ children }: {{ pascalCase name }}Props) {
+function {{ pascalCase name }} ({ children }: {{ pascalCase name }}Props, ref: Ref<HTMLDivElement>) {
   return (
-    <div>
+    <div ref={ref}>
       <h1>{{ name }}</h1>
       {children}
     </div>
   );
 }
 
-export {
-  {{ pascalCase name }}
-};
+export default forwardRef({{ pascalCase name }});

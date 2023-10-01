@@ -1,21 +1,18 @@
-import clsx from 'clsx';
+import { Typography } from '@material-tailwind/react';
+import type {Ref} from 'react';
+import {forwardRef} from 'react';
 import type { ParagraphProps } from './paragraph.types';
 
-function Paragraph ({ children, className }: ParagraphProps) {
+function Paragraph ({ children, className }: ParagraphProps, ref: Ref<HTMLElement>) {
   return (
-    <p
-      className={
-        clsx(
-          'font-sans text-base',
-          className,
-        )
-      }
+    <Typography
+      className={className}
+      ref={ref}
+      variant='paragraph'
     >
       {children}
-    </p>
+    </Typography>
   );
 }
 
-export {
-  Paragraph
-};
+export default forwardRef(Paragraph);

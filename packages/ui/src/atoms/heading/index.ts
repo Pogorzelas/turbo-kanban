@@ -1,2 +1,4 @@
-export { Heading } from './heading.component';
+import Heading from './heading.component';
+
 export type { HeadingProps } from './heading.types';
+export { Heading };

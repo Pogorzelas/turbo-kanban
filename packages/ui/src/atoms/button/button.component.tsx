@@ -1,28 +1,27 @@
-import clsx from 'clsx';
+import { Button as BaseButton } from '@material-tailwind/react';
+import type { Ref} from 'react';
+import {forwardRef} from 'react';
 import type { ButtonProps } from './button.types';
 
-function Button ({
-  children,
-  className,
-  isDisabled,
-  type = 'button',
-}: ButtonProps) {
+function Button(
+  {
+    children,
+    className,
+    isDisabled,
+    type = 'button',
+  }: ButtonProps,
+  ref: Ref<HTMLButtonElement>
+) {
   return (
-    <button
-      className={
-        clsx(
-          'cursor-pointer disabled:cursor-not-allowed text-sm font-sans bg-violet-500 hover:bg-violet-600 active:bg-violet-700 text-white rounded-lg font-semibold px-4 py-2 border-none disabled:opacity-50',
-          className,
-        )
-      }
+    <BaseButton
+      className={className}
       disabled={isDisabled}
+      ref={ref}
       type={type}
     >
       {children}
-    </button>
+    </BaseButton>
   );
 }
 
-export {
-  Button
-};
+export default forwardRef(Button);
