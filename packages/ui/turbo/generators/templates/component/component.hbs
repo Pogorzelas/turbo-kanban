@@ -1,0 +1,14 @@
+import type { {{ pascalCase name }}Props } from './{{kebabCase name}}.types';
+
+function {{ pascalCase name }} ({ children }: {{ pascalCase name }}Props) {
+  return (
+    <div>
+      <h1>{{ name }}</h1>
+      {children}
+    </div>
+  );
+}
+
+export {
+  {{ pascalCase name }}
+};

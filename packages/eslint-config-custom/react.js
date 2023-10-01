@@ -33,6 +33,10 @@ module.exports = {
   ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "**/*.css"],
   // add rules configurations here
   rules: {
-    "import/no-default-export": "off",
+    'quotes': ['error', 'single'],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'import/no-default-export': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };
